@@ -1,0 +1,9 @@
+{
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code'",
+  "tslint.autoFixOnSave": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "tslint.typeCheck": true,
+  "sassFormat.useSingleQuotes": true
+}

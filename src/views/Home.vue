@@ -1,17 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <delay :duration="1000">
+      <fade-transition>
+        <hero />
+      </fade-transition>
+    </delay>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Hero from '@/components/Hero/Hero.vue';
+import Delay from '@/components/helpers/Delay.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    Hero,
+    Delay
   },
 })
 export default class Home extends Vue {}
