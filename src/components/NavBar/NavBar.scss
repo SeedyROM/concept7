@@ -6,9 +6,9 @@ nav {
   justify-content: center;
   background: darken(#551ED6, 5%);
 
-  position: sticky;
-  top: 0;
-  left: 0;
+  // position: sticky;
+  // top: 0;
+  // left: 0;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -45,6 +45,7 @@ nav {
     margin-left: 1rem;
     line-height: 1;
     font-weight: bold;
+    border-radius: 3px;
     // box-sizing: border-box;
     @include fluid-type(10px, 16px);
 
@@ -52,18 +53,24 @@ nav {
 
     a {
       display: block;
+
+      &:active, &:visited, &:link {
+        color: $brand-color-white;
+        text-decoration: none;
+        text-decoration-line: none;
+      }
+    }
+
+    @media only screen and (max-width: $mobile-size) {
+      margin-left: 0.5rem;
+
     }
   }
   
   li:hover {
     background: #DEC673;
     color: lighten($brand-color-purple, 7%);
-    border-radius: 3px;
     cursor: pointer;
-    
-    a {
-      // text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
-    }
   }
 }
 

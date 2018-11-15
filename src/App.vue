@@ -1,8 +1,9 @@
-<template>
-  <div id="app">
-    <nav-bar />
-    <router-view/>
-  </div>
+<template lang="pug">
+  #app
+    nav-bar
+    slide-x-right-transition
+      keep-alive
+        router-view
 </template>
 
 <script lang="ts">

@@ -29,6 +29,7 @@ export default class Home extends Vue {}
 
 <style lang="scss" scoped>
   @import '~@/styles/_globals.scss';
+  
   .first-panel {
     color: $brand-color-white;
     background: $brand-color-purple;
