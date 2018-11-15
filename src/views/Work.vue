@@ -3,6 +3,7 @@
     .page-container
       .container(v-scroll-reveal)
         h1 Development
+          a.view-all View All
         .display
           div.example a
           div.example b
@@ -12,6 +13,7 @@
     .page-container(v-scroll-reveal)
       .container
         h1 Design
+          a.view-all View All
         .display
           div.example a
           div.example b
@@ -20,6 +22,7 @@
     .page-container(v-scroll-reveal)
       .container
         h1 Consultation
+          a.view-all View All
         .display
           div.example a
           div.example b
@@ -34,6 +37,7 @@ export default Vue.extend({});
 
 <style lang="scss" scoped>
   @import '~@/styles/_globals.scss';
+  @import '~@/styles/_typography.scss';
 
   .container {
     flex-direction: column;
@@ -53,6 +57,14 @@ export default Vue.extend({});
     place-items: start;
 
     grid-gap: 1.5rem;
+
+    @media only screen and (max-width: $mobile-size) {
+      display: block;
+
+      .example {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 
   .display > * {
@@ -74,6 +86,14 @@ export default Vue.extend({});
     font-weight: 800;
     padding-bottom: 0.25rem;
     border-bottom: 0.1333rem solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .view-all {
+      font-weight: normal;
+      @include fluid-type(10px, 15px);
+    }
   }
 
   .example {

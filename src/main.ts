@@ -18,7 +18,7 @@ Vue.use(VueScrollReveal, {
   distance: '-50px',
   duration: 800,
   viewOffset: {
-    bottom: 700,
+    bottom: 150,
   },
 });
 
