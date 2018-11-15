@@ -1,6 +1,6 @@
 <template lang="pug">
-  nav
-    .nav-bar
+  nav.page-container
+    .nav-bar.container
       delay(:duration=400)
         slide-x-right-transition(appear :duration=300)
           .logo(@click="goHome") concept7

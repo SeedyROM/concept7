@@ -2,23 +2,17 @@
 @import '~@/styles/typography';
 
 nav {
-  display: flex;
-  justify-content: center;
   background: darken(#551ED6, 5%);
 
   // position: sticky;
   // top: 0;
   // left: 0;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .nav-bar {
-  display: flex;
-  width: 100%;
   justify-content: space-between;
-  align-items: center;
-  max-width: $desktop-size;
 
   min-height: 1.75rem;
 
@@ -28,7 +22,7 @@ nav {
 
 .logo {
   font-family: 'Abril Fatface', serif;
-  @include fluid-type(25px, 31px);
+  @include fluid-type(23px, 31px, 320px);
   line-height: 0.95;
   margin-top: -0.2rem;
 
@@ -67,7 +61,7 @@ nav {
 
     @media only screen and (max-width: $mobile-size) {
       margin-left: 0.2rem;
-
+      padding: 0.25rem 0.75rem;
     }
   }
   

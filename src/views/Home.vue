@@ -33,7 +33,7 @@ export default Vue.extend({
     color: $brand-color-white;
     
     background: $brand-color-purple;
-    background: linear-gradient($brand-color-purple, lighten($brand-color-purple, 12%));
+    background: linear-gradient(lighten($brand-color-purple, 5%), $brand-color-purple);
 
     min-height: 50vh;
     justify-content: center;
@@ -43,7 +43,7 @@ export default Vue.extend({
     border-bottom: 10px solid $brand-color-orange;
 
     @media only screen and (max-width: $mobile-size) {
-      min-height: 25%; // Not sure why? haha
+      min-height: 115vw;
     }
   }
 </style>
