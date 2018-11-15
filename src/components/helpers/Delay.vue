@@ -5,7 +5,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+
 export default Vue.extend({
   props: {
     duration: {
@@ -13,19 +14,19 @@ export default Vue.extend({
     },
     placeholderHeight: {
       type: String,
-      default: "0px",
-    }
+      default: '0px',
+    },
   },
   mounted() {
     setTimeout(() => {
-      this.showing = true
-    }, this.duration)
+      this.showing = true;
+    }, this.duration);
   },
   data() {
     return {
       showing: false,
-    }
-  }
+    };
+  },
 });
 </script>
 

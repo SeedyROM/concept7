@@ -26,8 +26,8 @@ export default Vue.extend({
   methods: {
     goHome() {
       this.$router.push('/');
-    }
-  }
+    },
+  },
 });
 </script>
 

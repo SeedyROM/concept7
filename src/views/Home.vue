@@ -14,22 +14,21 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
 import Hero from '@/components/Hero/Hero.vue';
 import Delay from '@/components/helpers/Delay.vue';
 
-@Component({
+export default Vue.extend({
   components: {
+    Delay,
     Hero,
-    Delay
   },
-})
-export default class Home extends Vue {}
+});
 </script>
 
 <style lang="scss" scoped>
   @import '~@/styles/_globals.scss';
-  
+
   .first-panel {
     color: $brand-color-white;
     background: $brand-color-purple;
