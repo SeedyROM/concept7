@@ -31,19 +31,20 @@ export default Vue.extend({
 
   .first-panel {
     color: $brand-color-white;
+    
     background: $brand-color-purple;
+    background: linear-gradient($brand-color-purple, lighten($brand-color-purple, 12%));
+
     min-height: 50vh;
     justify-content: center;
     align-items: center;
     display: flex;
 
     border-bottom: 10px solid $brand-color-orange;
+
+    @media only screen and (max-width: $mobile-size) {
+      min-height: 25%; // Not sure why? haha
+    }
   }
-
-  .home {
-    height: 200vh;
-  }
-
-
 </style>
 

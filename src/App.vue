@@ -1,9 +1,10 @@
 <template lang="pug">
-  #app
-    nav-bar
-    slide-x-right-transition
-      keep-alive
-        router-view
+  fade-transition(appear :duration="500")
+    #app
+      nav-bar(key="nav-bar")
+      fade-transition(key="router" mode="out-in")
+        keep-alive
+          router-view
 </template>
 
 <script lang="ts">
