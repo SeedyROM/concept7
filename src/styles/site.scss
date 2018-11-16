@@ -13,6 +13,9 @@ h1, h2, h3, h4, h5 {
     font-family: 'Now', sans-serif;
 }
 
+::-moz-selection { color: $brand-color-orange; }
+::selection { color: $brand-color-orange; }
+
 .page-container {
   display: flex;
   justify-content: center;

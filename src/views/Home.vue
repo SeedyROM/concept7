@@ -33,14 +33,19 @@ export default Vue.extend({
     color: $brand-color-white;
     
     background: $brand-color-purple;
-    background: linear-gradient(lighten($brand-color-purple, 5%), $brand-color-purple);
+    // background: linear-gradient(lighten($brand-color-purple, 5%), $brand-color-purple);
+    background: linear-gradient($brand-color-orange, lighten($brand-color-orange, 3%));
+
+    *::selection { color: blue !important; }
+    *::-moz-selection { color: blue !important; }
+
 
     min-height: 50vh;
     justify-content: center;
     align-items: center;
     display: flex;
 
-    border-bottom: 10px solid $brand-color-orange;
+
 
     @media only screen and (max-width: $mobile-size) {
       min-height: 115vw;

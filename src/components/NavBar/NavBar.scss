@@ -2,7 +2,8 @@
 @import '~@/styles/typography';
 
 nav {
-  background: darken(#551ED6, 5%);
+  // background: darken(#551ED6, 5%);
+  background: lighten(blue, 10%);
 
   // position: sticky;
   // top: 0;
@@ -39,11 +40,10 @@ nav {
   margin: 0;
 
   li {
-    padding: 0.25rem 1rem;
-    margin-left: 1rem;
+    // padding: 0.25rem 1rem;
+    margin-left: 4rem;
     line-height: 1;
     font-weight: bold;
-    border-radius: 3px;
     // box-sizing: border-box;
     @include fluid-type(10px, 16px);
 
@@ -66,8 +66,6 @@ nav {
   }
   
   li:hover {
-    background: #DEC673;
-    color: lighten($brand-color-purple, 7%);
     cursor: pointer;
   }
 }

@@ -12,7 +12,7 @@
 
     .page-container(v-scroll-reveal)
       .container
-        h1 Design
+        h1.reverse Design
           a.view-all View All
         .display
           div.example a
@@ -90,9 +90,18 @@ export default Vue.extend({});
     align-items: center;
     justify-content: space-between;
 
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
     .view-all {
       font-weight: normal;
       @include fluid-type(10px, 15px);
+      cursor: pointer;
+      
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
