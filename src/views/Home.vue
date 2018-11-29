@@ -9,20 +9,20 @@
         .card
           img(src="~@/assets/images/icons/noun_skills.svg")
           .card__title Innovation
-          .card__copy 
+          .card__copy.left
             | Innovative designs and development practices to keep up with not only current trends
             | but up and coming technologies & services.
-        .card
+        .card.card--center
           img(src="~@/assets/images/icons/noun_respectful.svg")
           .card__title Collaboration
-          .card__copy 
+          .card__copy
             | Our team will work with you one on one to create the best website for your needs,
             | while also keeping your budget. Our in house designers and developers are personable
             | and are always willing to go above and beyond to meet your style.
         .card
           img(src="~@/assets/images/icons/noun_runes.svg")
           .card__title Future Proof
-          .card__copy 
+          .card__copy.right
             | Staying ahead of the curve in 2018 is no easy task,
             | luckily we've been building user experiences for half a decade.
   </div>
@@ -63,7 +63,12 @@ export default Vue.extend({
     background: $brand-color-purple;
     // background: linear-gradient(lighten($brand-color-purple, 5%), $brand-color-purple);
     // background: linear-gradient($brand-color-orange, lighten($brand-color-orange, 3%));
+    // border-bottom: 10px dashed #222;
+
     background: linear-gradient(#FA8768, #0002);
+    // box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 30px 100px rgba(255, 255, 255, 0.1);
+    z-index: 2;
 
     *::selection { color: blue !important; }
     *::-moz-selection { color: blue !important; }
@@ -77,7 +82,13 @@ export default Vue.extend({
     // display: grid;
     // grid-template-columns: repeat(3, 1fr);
     // grid-gap: 2rem;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+    min-height: 0;
+
+    // background-image: url('~@/assets/images/texture.svg');
+    // background-size: 400%;
+    // background-position: -20% auto;
+    // background-repeat: repeat-x;
 
     @media only screen and (max-width: $tablet-size) {
       grid-gap: 0;
@@ -92,7 +103,7 @@ export default Vue.extend({
   .card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
     color: white;
@@ -103,13 +114,21 @@ export default Vue.extend({
     img {
       width: 60%;
       fill: white;
-      max-width: 154px;
+      max-height: 154px;
 
-      @media only screen and (max-width: $mobile-size) {  
-
-      }
       @media only screen and (max-width: $mobile-size) {  
         width: 40%;
+      }
+    }
+
+    &--center {
+      img {
+        max-height: calc(154px + 2rem);
+
+        @media only screen and (max-width: $mobile-size) {
+          max-height: inherit;
+          width: 33%;
+        }
       }
     }
 
@@ -123,16 +142,24 @@ export default Vue.extend({
       text-transform: uppercase;
 
       
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     &__copy {
       text-align: center;
       letter-spacing: 0.25px;
-      line-height: 1.25;
+      line-height: 1.4;
 
-      @include fluid-type(13px, 16px);
+      @include fluid-type(15px, 17px);
       // font-family: "Now", sans-serif;
+
+      &.left {
+        text-align: left;
+      }
+
+      &.right {
+        text-align: right;
+      }
     }
 
     @media only screen and (max-width: $mobile-size) {
