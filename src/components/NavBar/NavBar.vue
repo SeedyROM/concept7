@@ -1,5 +1,7 @@
 <template lang="pug">
-  nav.page-container
+  nav.page-container(
+    :class="navBarColor"
+  )
     .nav-bar.container
       delay(:duration=400)
         slide-x-right-transition(appear :duration=300)
@@ -26,6 +28,16 @@ export default Vue.extend({
   methods: {
     goHome() {
       this.$router.push('/');
+    },
+  },
+  computed: {
+    navBarColor() {
+      switch (this.$route.path) {
+        case '/':
+          return 'dark';
+        default:
+          return 'blue';
+      }
     },
   },
 });
