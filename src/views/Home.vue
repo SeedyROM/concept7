@@ -10,22 +10,21 @@
           img(src="~@/assets/images/icons/noun_skills.svg")
           .card__title Innovation
           .card__copy.left
-            | Innovative designs and development practices to keep up with not only current trends
-            | but up and coming technologies & services.
+            | Innovative designs and development practices. Designed to keep up with not only the current trends
+            | but also popular up and coming technologies.
         .card.card--center
           img(src="~@/assets/images/icons/noun_respectful.svg")
           .card__title Collaboration
           .card__copy
-            | Our team will work with you one on one to create the best website for your needs,
-            | while also keeping your budget. Our in house designers and developers are personable
-            | and are always willing to go above and beyond to meet your style.
+            | Our team will work with you one on one to create the best website for your needs.
+            | Your budget is always our priority, and our in house designers and developers are
+            | there to help everystep of the way.
         .card
           img(src="~@/assets/images/icons/noun_runes.svg")
           .card__title Future Proof
           .card__copy.right
             | Staying ahead of the curve in 2018 is no easy task,
-            | luckily we've been building user experiences for half a decade.
-  </div>
+            | luckily we've been building user experiences for almost a decade.
 </template>
 
 <script lang="ts">
