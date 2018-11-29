@@ -1,6 +1,7 @@
 {
   "name": "concept7",
   "type": "static",
+  "version": 1,
   "static": {
     "public": "dist",
     "rewrites": [

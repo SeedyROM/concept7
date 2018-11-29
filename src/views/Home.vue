@@ -5,7 +5,7 @@
         fade-transition
           hero
     .page-container
-      .second-panel.container
+      .second-panel.container(v-scroll-reveal)
         .card
           img(src="~@/assets/images/icons/noun_skills.svg")
           .card__title Innovation
