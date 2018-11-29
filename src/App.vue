@@ -1,6 +1,6 @@
 <template lang="pug">
-  fade-transition(appear :duration="500")
-    #app
+  fade-transition(:duration="500")
+    #app(v-if="showing")
       nav-bar(key="nav-bar")
       fade-transition(key="router" mode="out-in")
         keep-alive
@@ -14,6 +14,14 @@ import NavBar from './components/NavBar/NavBar.vue';
 export default Vue.extend({
   components: {
     NavBar,
+  },
+  data: () => ({
+      showing: false,
+  }),
+  mounted() {
+    setTimeout(() => {
+      this.showing = true;
+    }, 300);
   },
 });
 </script>

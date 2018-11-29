@@ -8,6 +8,10 @@
       "node_modules/**"
     ]
   },
+  "include": [
+    "src//*.ts",
+    "src//*.vue"
+  ],
   "rules": {
     "quotemark": [true, "single"],
     "indent": [true, "spaces", 2],

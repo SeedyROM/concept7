@@ -5,13 +5,13 @@
         slide-x-right-transition(appear :duration=300)
           .logo(@click="goHome") concept7
       delay(:duration=750)
-        slide-y-up-transition(appear group :duration=400 tag="ul")
-            li(key="work")
-              router-link(to="/work") Work
-            li(key="who")
-              router-link(to="/") Who Are We?
-            li(key="contact")
-              router-link(to="/") Contact
+        slide-y-up-transition(appear group :duration=400 tag="ul" class="nav-bar__links")
+            li.nav-bar__item(key="work")
+              router-link.nav-bar__link(to="/work") Work
+            li.nav-bar__item(key="who")
+              router-link.nav-bar__link(to="/") Who Are We?
+            li.nav-bar__item(key="contact")
+              router-link.nav-bar__link(to="/") Contact
 
 </template>
 

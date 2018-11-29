@@ -1,10 +1,10 @@
 <template lang="pug">
     .hero
       zoom-x-transition(:duration=600 appear)
-        .heading Minimalist Design
+        .hero__heading Minimalist Design
       delay(:duration=700 placeholderHeight="3rem")
         slide-x-left-transition(:duration=700 appear)
-          .message Creating simplistic and feature rich web applications for the 22nd Century
+          .hero__message Creating simplistic and feature rich web applications for the 22nd Century
 </template>
 
 <script lang="ts">

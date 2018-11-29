@@ -34,7 +34,8 @@ export default Vue.extend({
     
     background: $brand-color-purple;
     // background: linear-gradient(lighten($brand-color-purple, 5%), $brand-color-purple);
-    background: linear-gradient($brand-color-orange, lighten($brand-color-orange, 3%));
+    // background: linear-gradient($brand-color-orange, lighten($brand-color-orange, 3%));
+    background: linear-gradient(#FA8768, #937);
 
     *::selection { color: blue !important; }
     *::-moz-selection { color: blue !important; }

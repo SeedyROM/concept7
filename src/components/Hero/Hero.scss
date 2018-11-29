@@ -7,38 +7,36 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     height: 100%;
-
     padding: 2rem;
-}
 
-.heading, .message {
-    font-family: 'Now';
-    text-transform: uppercase;
-}
-
-.heading {
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    
-    @include fluid-type(35px, 50px);
-    
-    @media only screen and (max-width: $mobile-size) {
-      text-align: left;
+    &__heading, &__message {
+        font-family: 'Now';
+        text-transform: uppercase;
     }
-}
-
-.message {
-    font-weight: 300;
-    @include fluid-type(12px, 18px);  
-    max-width: 600px;
-    text-align: center; 
-    line-height: 1.5; 
-
-    @media only screen and (max-width: $mobile-size) {
-        text-align: left;
+    
+    &__heading {
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        
+        @include fluid-type(35px, 50px);
+        
+        @media only screen and (max-width: $mobile-size) {
+          text-align: left;
+        }
+    }
+    
+    &__message {
+        font-weight: 300;
+        @include fluid-type(12px, 18px);  
+        max-width: 600px;
+        text-align: center; 
+        line-height: 1.5; 
+    
+        @media only screen and (max-width: $mobile-size) {
+            text-align: left;
+        }
     }
 }
