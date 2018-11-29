@@ -40,7 +40,7 @@ nav {
     line-height: 1;
     font-weight: bold;
     // box-sizing: border-box;
-    @include fluid-type(10px, 16px);
+    @include fluid-type(10px, 14px);
   
     transition: background-color 0.2s ease-in-out;
   
@@ -56,6 +56,10 @@ nav {
   
     &:hover {
       cursor: pointer;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
     }
   
     @media only screen and (max-width: $mobile-size) {

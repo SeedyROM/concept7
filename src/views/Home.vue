@@ -91,6 +91,7 @@ export default Vue.extend({
     // background-repeat: repeat-x;
 
     @media only screen and (max-width: $tablet-size) {
+      padding: 2rem 1rem;
       grid-gap: 0;
     }
 
@@ -122,9 +123,11 @@ export default Vue.extend({
     }
 
     &--center {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+
       img {
         max-height: calc(154px + 2rem);
-
         @media only screen and (max-width: $mobile-size) {
           max-height: inherit;
           width: 33%;
@@ -160,6 +163,26 @@ export default Vue.extend({
       &.right {
         text-align: right;
       }
+
+      @media only screen and (max-width: $tablet-size) {
+        font-size: 15px;
+        line-height: 1.3;
+      }
+
+      @media only screen and (max-width: $mobile-size) {
+        &, &.left, &.right{
+          text-align: center;
+        }
+      }
+    }
+
+    @media only screen and (min-width: $desktop-size) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    @media only screen and (max-width: $tablet-size) {
+      padding: 1.5rem;
     }
 
     @media only screen and (max-width: $mobile-size) {
