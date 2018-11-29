@@ -29,13 +29,18 @@ export default Vue.extend({
 <style lang="scss" scoped>
   @import '~@/styles/_globals.scss';
 
+  .home {
+    background: $brand-color-purple;
+    min-height: 100vh;
+  }
+
   .first-panel {
     color: $brand-color-white;
     
     background: $brand-color-purple;
     // background: linear-gradient(lighten($brand-color-purple, 5%), $brand-color-purple);
     // background: linear-gradient($brand-color-orange, lighten($brand-color-orange, 3%));
-    background: linear-gradient(#FA8768, #937);
+    background: linear-gradient(#FA8768, #0002);
 
     *::selection { color: blue !important; }
     *::-moz-selection { color: blue !important; }
