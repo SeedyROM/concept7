@@ -2,9 +2,8 @@
 @import '~@/styles/typography';
 
 .not-found {
-  height: 100%;
-  background: darken(blue, 10%);
-
+  background: desaturate(darken(blue, 10%), 25%);
+  flex-grow: 1;
   padding: 1rem;
 }
 
@@ -13,8 +12,17 @@
   align-items: flex-start;
 }
 
+h2, h4 {
+  color: $brand-color-white;
+}
+
 h2 {
   font-family: 'Abril Fatface', serif;
+  color: $brand-color-white;
+  @include fluid-type(70px, 90px);
+  // letter-spacing: 0.05em;
+}
 
-  @include fluid-type(30px, 60px);
+h4 {
+  @include fluid-type(60px - 40px, 120px - 40px);
 }
