@@ -1,0 +1,20 @@
+@import '~@/styles/globals';
+@import '~@/styles/typography';
+
+.not-found {
+  height: 100%;
+  background: darken(blue, 10%);
+
+  padding: 1rem;
+}
+
+.container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h2 {
+  font-family: 'Abril Fatface', serif;
+
+  @include fluid-type(30px, 60px);
+}

@@ -1,22 +1,3 @@
-<template lang="pug">
-  nav.page-container(
-    :class="navBarColor"
-  )
-    .nav-bar.container
-      delay(:duration=400)
-        slide-x-right-transition(appear :duration=300)
-          .logo(@click="goHome") concept7
-      delay(:duration=750)
-        slide-y-up-transition(appear group :duration=400 tag="ul" class="nav-bar__links")
-            li.nav-bar__item(key="work")
-              router-link.nav-bar__link(to="/work") Work
-            li.nav-bar__item(key="who")
-              router-link.nav-bar__link(to="/us") Who Are We?
-            li.nav-bar__item(key="contact")
-              router-link.nav-bar__link(to="/contact") Contact
-
-</template>
-
 <script lang="ts">
 import Vue from 'vue';
 import Delay from '@/components/helpers/Delay.vue';
@@ -43,6 +24,5 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
-@import "./NavBar.scss";
-</style>
+<template lang="pug" src="@/components/NavBar/NavBar.pug"></template>
+<style scoped lang="scss" src="@/components/NavBar/NavBar.scss"></style>

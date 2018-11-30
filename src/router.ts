@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+
+import Home from './views/Home/Home.vue';
+import NotFound from './views/NotFound/NotFound.vue';
 
 Vue.use(Router);
 
@@ -16,7 +18,12 @@ export default new Router({
     {
       path: '/work',
       name: 'work',
-      component: () => import(/* webpackChunkName: "about" */ './views/Work.vue'),
+      component: () => import(/* webpackChunkName: "about" */ './views/Work/Work.vue'),
+    },
+    {
+      path: '/*',
+      name: 'not-found',
+      component: NotFound,
     },
   ],
 });
