@@ -1,9 +1,3 @@
-<template lang="pug">
-  .placeholder(v-if="!showing" :style="{height: placeholderHeight}")
-  div(v-else)
-    slot
-</template>
-
 <script lang="ts">
 import Vue from 'vue';
 
@@ -30,8 +24,14 @@ export default Vue.extend({
 });
 </script>
 
+<template lang="pug">
+.placeholder(v-if="!showing" :style="{height: placeholderHeight}")
+div(v-else)
+  slot
+</template>
+
 <style lang="scss" scoped>
-  .hide {
-    opacity: 0;
-  }
+.hide {
+  opacity: 0;
+}
 </style>
