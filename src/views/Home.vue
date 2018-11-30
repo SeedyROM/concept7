@@ -10,8 +10,8 @@
           img(src="~@/assets/images/icons/noun_skills.svg")
           .card__title Innovation
           .card__copy.left
-            | Innovative designs and development practices. Designed to keep up with not only the current trends
-            | but also popular up and coming technologies.
+            | We specialize in innovative designs and development practices. 
+            | Designed to keep up with up and coming technologies.
         .card.card--center
           img(src="~@/assets/images/icons/noun_respectful.svg")
           .card__title Collaboration
@@ -49,7 +49,7 @@ export default Vue.extend({
     min-height: 100vh;
   }
 
-  .first-panel, .second-panel {
+  .first-panel {
     min-height: 50vh;
     justify-content: center;
     align-items: center;
@@ -81,8 +81,13 @@ export default Vue.extend({
     // display: grid;
     // grid-template-columns: repeat(3, 1fr);
     // grid-gap: 2rem;
-    padding: 2rem 1rem;
+    padding: 2rem;
     min-height: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 3rem;
+
 
     // background-image: url('~@/assets/images/texture.svg');
     // background-size: 400%;
@@ -103,7 +108,7 @@ export default Vue.extend({
   .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 
     color: white;
@@ -122,8 +127,8 @@ export default Vue.extend({
     }
 
     &--center {
-      padding-left: 2rem !important;
-      padding-right: 2rem !important;
+      // padding-left: 4rem !important;
+      // padding-right: 4rem !important;
 
       img {
         max-height: calc(154px + 2rem);
@@ -152,16 +157,8 @@ export default Vue.extend({
       letter-spacing: 0.25px;
       line-height: 1.4;
 
-      @include fluid-type(15px, 17px);
+      @include fluid-type(13px, 15px);
       // font-family: "Now", sans-serif;
-
-      &.left {
-        text-align: left;
-      }
-
-      &.right {
-        text-align: right;
-      }
 
       @media only screen and (max-width: $tablet-size) {
         font-size: 15px;

@@ -4,6 +4,10 @@
 @import 'typography';
 @import 'globals';
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
     font-family: 'Open Sans', sans-serif;
     @include fluid-type(12px, 18px);
