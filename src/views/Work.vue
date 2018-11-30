@@ -1,33 +1,34 @@
 <template lang="pug">
-  .work
-    .page-container
-      .container(v-scroll-reveal)
-        h1 Development
-          a.view-all View All
-        .display
-          div.example a
-          div.example b
-          div.example c
-          div.example d
+.work
+  .page-container(v-scroll-reveal)
+    .container
+      h1 Development
+        a.view-all View All
+      .display
+        div.example a
+        div.example b
+        div.example c
+        div.example d
 
-    .page-container(v-scroll-reveal)
-      .container
-        h1.reverse Design
-          a.view-all View All
-        .display
-          div.example a
-          div.example b
-          div.example c
-          div.example d
-    .page-container(v-scroll-reveal)
-      .container
-        h1 Consultation
-          a.view-all View All
-        .display
-          div.example a
-          div.example b
-          div.example c
-          div.example d
+  .page-container(v-scroll-reveal)
+    .container
+      h1.reverse Design
+        a.view-all View All
+      .display
+        div.example a
+        div.example b
+        div.example c
+        div.example d
+
+  .page-container(v-scroll-reveal)
+    .container
+      h1 Consultation
+        a.view-all View All
+      .display
+        div.example a
+        div.example b
+        div.example c
+        div.example d
 </template>
 
 <script lang="ts">

@@ -11,9 +11,9 @@
             li.nav-bar__item(key="work")
               router-link.nav-bar__link(to="/work") Work
             li.nav-bar__item(key="who")
-              router-link.nav-bar__link(to="/") Who Are We?
+              router-link.nav-bar__link(to="/us") Who Are We?
             li.nav-bar__item(key="contact")
-              router-link.nav-bar__link(to="/") Contact
+              router-link.nav-bar__link(to="/contact") Contact
 
 </template>
 

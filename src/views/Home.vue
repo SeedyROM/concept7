@@ -1,30 +1,32 @@
 <template lang="pug">
-  .home
-    .first-panel
-      delay(:duration="1000")
-        fade-transition
-          hero
-    .page-container
-      .second-panel.container(v-scroll-reveal)
-        .card
-          img(src="~@/assets/images/icons/noun_skills.svg")
-          .card__title Innovation
-          .card__copy.left
-            | We specialize in innovative designs and development practices. 
-            | Designed to keep up with up and coming technologies.
-        .card.card--center
-          img(src="~@/assets/images/icons/noun_respectful.svg")
-          .card__title Collaboration
-          .card__copy
-            | Our team will work with you one on one to create the best website for your needs.
-            | Your budget is always our priority, and our in house designers and developers are
-            | there to help everystep of the way.
-        .card
-          img(src="~@/assets/images/icons/noun_runes.svg")
-          .card__title Future Proof
-          .card__copy.right
-            | Staying ahead of the curve in 2018 is no easy task,
-            | luckily we've been building user experiences for almost a decade.
+.home
+  .first-panel
+    delay(:duration="1000")
+      fade-transition
+        hero
+  .page-container
+    fade-transition
+      delay(:duration="2000")
+        .second-panel.container
+          .card(v-scroll-reveal)
+            img(src="~@/assets/images/icons/noun_skills.svg")
+            .card__title Innovation
+            .card__copy.left
+              | We specialize in innovative designs and development practices. 
+              | Designed to keep up with up and coming technologies.
+          .card.card--center(v-scroll-reveal)
+            img(src="~@/assets/images/icons/noun_respectful.svg")
+            .card__title Collaboration
+            .card__copy
+              | Our team will work with you one on one to create the best website for your needs.
+              | Your budget is always our priority, and our in house designers and developers are
+              | there to help everystep of the way.
+          .card(v-scroll-reveal)
+            img(src="~@/assets/images/icons/noun_runes.svg")
+            .card__title Future Proof
+            .card__copy.right
+              | Staying ahead of the curve in 2018 is no easy task,
+              | luckily we've been building user experiences for almost a decade.
 </template>
 
 <script lang="ts">
@@ -50,7 +52,8 @@ export default Vue.extend({
   }
 
   .first-panel {
-    min-height: 50vh;
+    min-height: 450px;
+    height: 75vh;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -59,18 +62,23 @@ export default Vue.extend({
   .first-panel {
     color: $brand-color-white;
     
-    background: $brand-color-purple;
+
     // background: linear-gradient(lighten($brand-color-purple, 5%), $brand-color-purple);
     // background: linear-gradient($brand-color-orange, lighten($brand-color-orange, 3%));
-    // border-bottom: 10px dashed #222;
+    background-color: $brand-color-purple;
+    background: linear-gradient(171deg, #FA8768, #0002);
 
-    background: linear-gradient(#FA8768, #0002);
     // box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 30px 100px rgba(255, 255, 255, 0.1);
+    // box-shadow: 0px 30px 100px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 29px 239px 96px rgba(255, 255, 255, 0.15);
     z-index: 2;
 
     *::selection { color: blue !important; }
     *::-moz-selection { color: blue !important; }
+
+    @media only screen and (max-width: $tablet-size) {
+      max-height: 450px;
+    }
 
     @media only screen and (max-width: $mobile-size) {
       min-height: 115vw;
@@ -88,6 +96,8 @@ export default Vue.extend({
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 3rem;
 
+    box-shadow: 0px -3px 68px rgba(0, 0, 0, 0.1);
+
 
     // background-image: url('~@/assets/images/texture.svg');
     // background-size: 400%;
@@ -96,6 +106,7 @@ export default Vue.extend({
 
     @media only screen and (max-width: $tablet-size) {
       padding: 2rem 1rem;
+      grid-template-columns: 5fr 6fr 5fr;
       grid-gap: 0;
     }
 
@@ -167,6 +178,7 @@ export default Vue.extend({
 
       @media only screen and (max-width: $mobile-size) {
         &, &.left, &.right{
+          padding: 0 4rem;
           text-align: center;
         }
       }

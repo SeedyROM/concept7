@@ -22,6 +22,7 @@ nav {
 
 .nav-bar {
   justify-content: space-between;
+  box-sizing: content-box;
   min-height: 1.75rem;
   padding: 1rem 1rem;
   color: $brand-color-white;
@@ -46,6 +47,33 @@ nav {
   
     a {
       display: block;
+      position: relative;
+
+      $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+
+
+      &:before {
+        content: "";
+        position: absolute;
+
+        width: calc(100% - 2px);
+        height: 2px;
+        left: 1px;
+        bottom: -6px;
+
+        background-color: $brand-color-white;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: $thetransition;
+        transition: $thetransition;
+      }
+
+      &.router-link-active:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
   
       &:active, &:visited, &:link {
         color: $brand-color-white;
