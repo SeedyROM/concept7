@@ -15,6 +15,10 @@ nav {
     // border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   }
 
+  &.orange {
+    background: darken($brand-color-orange, 5%);
+  }
+
   &.blue {
     background: lighten(blue, 10%);
   }

@@ -12,10 +12,12 @@ export default Vue.extend({
     },
   },
   computed: {
-    navBarColor() {
-      switch (this.$route.path) {
-        case '/':
+    navBarColor(): string {
+      switch (this.$route.name) {
+        case 'home':
           return 'dark';
+        case 'not-found':
+          return 'orange';
         default:
           return 'blue';
       }

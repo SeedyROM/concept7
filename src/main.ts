@@ -14,12 +14,13 @@ import store from './store';
 Vue.use(Transitions);
 Vue.use(VLazyImagePlugin);
 Vue.use(VueScrollReveal, {
-  scale: 1,
-  distance: '-50px',
-  duration: 800,
+  scale: 0.88,
+  distance: '-40px',
+  duration: 600,
   viewOffset: {
     bottom: 250,
   },
+  cleanUp: false,
 });
 
 Vue.config.productionTip = false;

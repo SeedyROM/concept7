@@ -3,8 +3,7 @@
     #app(v-if="showing")
       nav-bar(key="nav-bar")
       fade-transition(key="router" mode="out-in")
-        keep-alive
-          router-view
+        router-view(:key="$route.fullPath")
 </template>
 
 <script lang="ts">
