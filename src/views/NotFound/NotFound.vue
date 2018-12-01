@@ -7,6 +7,7 @@
       fade-transition.not-found__ellipses(
         group
         tag="span"
+        @leave="leave"
       )
         .dot(key="1" v-if="t >= 1")
         .dot(key="2" v-if="t >= 2")
@@ -23,6 +24,12 @@ export default Vue.extend({
     setInterval(() => {
       this.t = (this.t + 1) % 4;
     }, 800);
+  },
+  methods: {
+    leave(el: HTMLElement) {
+      el.style.position = 'absolute';
+      el.style.left = el.clientWidth * 3 + 'px';
+    },
   },
 });
 </script>

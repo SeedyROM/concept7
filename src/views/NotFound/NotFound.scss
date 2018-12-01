@@ -4,8 +4,10 @@
 .container {
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
+
+  padding-top: 5em;
 }
 
 .not-found {
@@ -16,13 +18,14 @@
 
   &__image {
     width: 20vw;
+    min-width: 170px;
     margin-bottom: -5vw;
   }
 
   &__title {
     font-family: 'Now', sans-serif;
     color: $brand-color-white;
-    @include fluid-type(40px, 70px);
+    @include fluid-type(40px, 60px);
     font-weight: bold;
     // letter-spacing: -3px;
     text-rendering: optimizeLegibility; 
@@ -51,6 +54,8 @@
     @media only screen and (max-width: $mobile-size) {
       top: 0.5rem;
       left: 0;
+
+      // justify-content: center;
     }
 
     .dot {
