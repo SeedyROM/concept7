@@ -20,11 +20,14 @@
   }
 
   &__title {
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Now', sans-serif;
     color: $brand-color-white;
     @include fluid-type(40px, 70px);
     font-weight: bold;
+    // letter-spacing: -3px;
+    text-rendering: optimizeLegibility; 
     text-align: center;
+    text-transform: uppercase;
 
     display: flex;
 
@@ -39,14 +42,14 @@
     display: flex;
     min-width: 2.3rem;
     min-height: 0.6rem;
-    align-items: flex-end;
+    align-items: center;
     
     position: relative;
-    top: -13px;
-    left: 8px;
+    left: 0.15em;
+    top: 0.17em;
     
     @media only screen and (max-width: $mobile-size) {
-      top: 0;
+      top: 0.5rem;
       left: 0;
     }
 

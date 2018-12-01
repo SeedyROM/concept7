@@ -7,7 +7,6 @@
       fade-transition.not-found__ellipses(
         group
         tag="span"
-        mode="in-out"
       )
         .dot(key="1" v-if="t >= 1")
         .dot(key="2" v-if="t >= 2")
