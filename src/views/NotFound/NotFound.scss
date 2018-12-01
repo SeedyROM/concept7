@@ -1,28 +1,61 @@
 @import '~@/styles/globals';
 @import '~@/styles/typography';
 
-.not-found {
-  background: desaturate(darken(blue, 10%), 25%);
-  flex-grow: 1;
-  padding: 1rem;
-}
-
 .container {
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
-h2, h4 {
-  color: $brand-color-white;
-}
+.not-found {
+  // background: desaturate(darken(blue, 10%), 25%);
+  background: #111;
+  flex-grow: 1;
+  padding: 1rem;
 
-h2 {
-  font-family: 'Abril Fatface', serif;
-  color: $brand-color-white;
-  @include fluid-type(70px, 90px);
-  // letter-spacing: 0.05em;
-}
+  &__image {
+    width: 20vw;
+    margin-bottom: -5vw;
+  }
 
-h4 {
-  @include fluid-type(60px - 40px, 120px - 40px);
+  &__title {
+    font-family: 'Abril Fatface', serif;
+    color: $brand-color-white;
+    @include fluid-type(40px, 70px);
+    font-weight: bold;
+    text-align: center;
+
+    display: flex;
+
+    @media only screen and (max-width: $mobile-size) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__ellipses {
+    margin-top: 0.5rem;
+    display: flex;
+    min-width: 2.3rem;
+    min-height: 0.6rem;
+    align-items: flex-end;
+    
+    position: relative;
+    top: -13px;
+    left: 8px;
+    
+    @media only screen and (max-width: $mobile-size) {
+      top: 0;
+      left: 0;
+    }
+
+    .dot {
+      border-radius: 100%;
+      background: #fff;
+      height: 0.5rem;
+      width: 0.5rem;
+      margin-right: 4px
+    }
+  }
 }
