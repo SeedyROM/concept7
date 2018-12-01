@@ -5,24 +5,23 @@
         hero
   .page-container.second-panel__shadow
     fade-transition
-      delay(:duration="2000" placeholder="10rem")
-        .second-panel.container
-          .card(v-scroll-reveal)
-            img(src="~@/assets/images/icons/noun_skills.svg")
-            .card__title Innovation
-            .card__copy.left
-              | We specialize in innovative designs and development practices. 
-              | Designed to keep up with up and coming technologies.
-          .card.card--center(v-scroll-reveal)
-            img(src="~@/assets/images/icons/noun_respectful.svg")
-            .card__title Collaboration
-            .card__copy
-              | Our team will work with you one on one to create the best website for your needs.
-              | Your budget is always our priority, and our in house designers and developers are
-              | there to help everystep of the way.
-          .card(v-scroll-reveal)
-            img(src="~@/assets/images/icons/noun_runes.svg")
-            .card__title Future Proof
-            .card__copy.right
-              | Staying ahead of the curve in 2018 is no easy task,
-              | luckily we've been building user experiences for almost a decade.
+      .second-panel.container
+        .card(v-scroll-reveal)
+          img(src="~@/assets/images/icons/noun_skills.svg")
+          .card__title Innovation
+          .card__copy.left
+            | We specialize in innovative designs and development practices. 
+            | Designed to keep up with up and coming technologies.
+        .card.card--center(v-scroll-reveal)
+          img(src="~@/assets/images/icons/noun_respectful.svg")
+          .card__title Collaboration
+          .card__copy
+            | Our team will work with you one on one to create the best website for your needs.
+            | Your budget is always our priority, and our in house designers and developers are
+            | there to help everystep of the way.
+        .card(v-scroll-reveal)
+          img(src="~@/assets/images/icons/noun_runes.svg")
+          .card__title Future Proof
+          .card__copy.right
+            | Staying ahead of the curve in 2018 is no easy task,
+            | luckily we've been building user experiences for almost a decade.
