@@ -11,15 +11,14 @@
 }
 
 .not-found {
-  background: desaturate(darken(blue, 0%), 45%);
+  background-color: $brand-color-off-blue;
   // background: #111;
   flex-grow: 1;
   padding: 1rem;
 
   &__image {
-    width: 20vw;
-    min-width: 170px;
-    margin-bottom: -5vw;
+    width: 170px;
+    margin-bottom: -3.5rem;
   }
 
   &__title {
