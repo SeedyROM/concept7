@@ -17,7 +17,9 @@
   padding: 1rem;
 
   &__image {
-    width: 170px;
+    width: 43vw;
+    min-width: 131px;
+    max-width: 206px;
     margin-bottom: -3.5rem;
   }
 
