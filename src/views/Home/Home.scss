@@ -3,11 +3,12 @@
 
 .home {
   background: $brand-color-purple;
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 .first-panel {
   min-height: 450px;
+  max-height: 775px;
   height: 68vh;
   justify-content: center;
   align-items: center;
