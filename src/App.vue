@@ -1,5 +1,5 @@
 <template lang="pug">
-  fade-transition(:duration="500")
+  fade-transition(:duration="500" appear)
     #app(v-if="showing")
       nav-bar(key="nav-bar")
       fade-transition(key="router" mode="out-in")
