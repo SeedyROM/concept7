@@ -1,5 +1,5 @@
 {
-  "name": "concept7",
+  "name": "concept9",
   "type": "static",
   "version": 1,
   "static": {
@@ -11,7 +11,10 @@
       }
     ]
   },
-  "alias": "McMills Contruction",
+  "alias": [
+    "staging.concept7.design",
+    "concept7.design"
+  ],
   "files": [
     "dist"
   ]
